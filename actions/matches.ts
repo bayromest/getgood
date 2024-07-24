@@ -25,14 +25,14 @@ export async function GetMatchlist(puuid: string) {
     // Return the data as received
     return response.data;
   } catch (error) {
-    // // Handle and log error details
-    // if (axios.isAxiosError(error)) {
-    //   console.error("Axios Error:", error.response?.data || error.message);
-    // } else {
-    //   console.error("Unknown Error:", error);
-    // }
-    // throw new Error(
-    //   error instanceof Error ? error.message : "An unknown error occurred"
-    // );
+    // Handle and log error details
+    if (axios.isAxiosError(error)) {
+      console.error("Axios Error:", error.response?.data || error.message);
+    } else {
+      console.error("Unknown Error:", error);
+    }
+    throw new Error(
+      error instanceof Error ? error.message : "An unknown error occurred"
+    );
   }
 }

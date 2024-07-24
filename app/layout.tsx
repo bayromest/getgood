@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import "@/styles/globals.css";
 import { Inter as FontSans } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
-import { LeagueVersionProvider } from "@/context/LeagueVersionContext";
 import { cn } from "@/lib/utils";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { Toaster } from "@/components/ui/toaster";
@@ -33,7 +32,7 @@ export default function RootLayout({
       >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <TooltipProvider>
-            <LeagueVersionProvider> {children}</LeagueVersionProvider>
+            {children}
             <Toaster />
           </TooltipProvider>
         </ThemeProvider>

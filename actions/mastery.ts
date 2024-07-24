@@ -26,10 +26,6 @@ export async function getChampionMasteryByPUUIDAndChampionId({
       "Error fetching champion mastery by PUUID and champion ID:",
       error
     );
-    throw new Error(
-      error.response
-        ? error.response.data.status.message
-        : "An unknown error occurred"
-    );
+    throw new Error("An unknown error occurred");
   }
 }
