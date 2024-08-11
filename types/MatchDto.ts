@@ -13,10 +13,10 @@ interface MetadataDto {
 
 // InfoDto definition
 interface InfoDto {
-  endOfGameResult?: string; // Indicates if the game ended in termination
+  endOfGameResult: string; // Indicates if the game ended in termination
   gameCreation: number; // Unix timestamp for when the game was created
   gameDuration: number; // Duration in milliseconds (pre-patch 11.20) or seconds (post-patch 11.20)
-  gameEndTimestamp?: number; // Unix timestamp for when the match ended
+  gameEndTimestamp: number; // Unix timestamp for when the match ended
   gameId: number; // Unique game identifier
   gameMode: string; // Game mode
   gameName: string; // Game name
@@ -28,7 +28,7 @@ interface InfoDto {
   platformId: string; // Platform where the match was played
   queueId: number; // Queue ID
   teams: TeamDto[];
-  tournamentCode?: string; // Tournament code used to generate the match
+  tournamentCode: string; // Tournament code used to generate the match
 }
 
 // ParticipantDto definition
@@ -89,7 +89,7 @@ interface ParticipantDto {
   magicDamageDealt: number;
   magicDamageDealtToChampions: number;
   magicDamageTaken: number;
-  missions?: MissionsDto; // Missions data
+  missions: MissionsDto; // Missions data
   neutralMinionsKilled: number; // Incremented on kills of kPet and kJungleMonster
   needVisionPings: number; // Green ward
   nexusKills: number;
@@ -112,7 +112,7 @@ interface ParticipantDto {
   playerScore10: number;
   playerScore11: number;
   pentaKills: number;
-  perks?: PerksDto; // Perks data
+  perks: PerksDto; // Perks data
   physicalDamageDealt: number;
   physicalDamageDealtToChampions: number;
   physicalDamageTaken: number;
