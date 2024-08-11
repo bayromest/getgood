@@ -5,14 +5,14 @@ export interface MatchDto {
 }
 
 // MetadataDto definition
-interface MetadataDto {
+export interface MetadataDto {
   dataVersion: string;
   matchId: string;
   participants: string[]; // List of participant PUUIDs
 }
 
 // InfoDto definition
-interface InfoDto {
+export interface InfoDto {
   endOfGameResult: string; // Indicates if the game ended in termination
   gameCreation: number; // Unix timestamp for when the game was created
   gameDuration: number; // Duration in milliseconds (pre-patch 11.20) or seconds (post-patch 11.20)
@@ -32,7 +32,7 @@ interface InfoDto {
 }
 
 // ParticipantDto definition
-interface ParticipantDto {
+export interface ParticipantDto {
   allInPings: number; // Yellow crossed swords
   assistMePings: number; // Green flag
   assists: number;
@@ -176,7 +176,7 @@ interface ParticipantDto {
   win: boolean;
 }
 
-interface MissionsDto {
+export interface MissionsDto {
   playerScore0: number;
   playerScore1: number;
   playerScore2: number;
@@ -192,7 +192,7 @@ interface MissionsDto {
 }
 
 // ChallengesDto definition
-interface ChallengesDto {
+export interface ChallengesDto {
   // _12AssistStreakCount: number;
   baronBuffGoldAdvantageOverThreshold: number;
   controlWardTimeCoverageInRiverOrEnemyHalf: number;
@@ -268,27 +268,27 @@ interface ChallengesDto {
 }
 
 // PerksDto definition
-interface PerksDto {
+export interface PerksDto {
   statPerks: StatPerksDto;
   styles: StyleDto[];
 }
 
 // StatPerksDto definition
-interface StatPerksDto {
+export interface StatPerksDto {
   defense: number;
   flex: number;
   offense: number;
 }
 
 // StyleDto definition
-interface StyleDto {
+export interface StyleDto {
   description: string;
   selections: SelectionDto[];
   style: number;
 }
 
 // SelectionDto definition
-interface SelectionDto {
+export interface SelectionDto {
   perk: number;
   var1: number;
   var2: number;
@@ -296,7 +296,7 @@ interface SelectionDto {
 }
 
 // TeamDto definition
-interface TeamDto {
+export interface TeamDto {
   bans: BanDto[];
   objectives: ObjectivesDto;
   teamId: number;
@@ -304,13 +304,13 @@ interface TeamDto {
 }
 
 // BanDto definition
-interface BanDto {
+export interface BanDto {
   championId: number;
   pickTurn: number;
 }
 
 // ObjectivesDto definition
-interface ObjectivesDto {
+export interface ObjectivesDto {
   baron: ObjectiveDto;
   champion: ObjectiveDto;
   dragon: ObjectiveDto;
@@ -320,7 +320,7 @@ interface ObjectivesDto {
 }
 
 // ObjectiveDto definition
-interface ObjectiveDto {
+export interface ObjectiveDto {
   first: boolean;
   kills: number;
 }
