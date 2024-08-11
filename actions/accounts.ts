@@ -61,3 +61,26 @@ export async function GetAccountPUUIDByRiotId({
     };
   }
 }
+
+export async function GetAccountByPUUID({ puuid }: { puuid: string }) {
+  try {
+    const response = await axios.get(
+      `https://europe.api.riotgames.com/riot/account/v1/accounts/by-puuid/${puuid}`,
+      {
+        headers: {
+          "X-Riot-Token": apiKey,
+        },
+      }
+    );
+    return response.data;
+  } catch (error) {
+    console.error(
+      "Error fetching account by Riot ID:",
+      error instanceof Error ? error.message : error
+    );
+    return {
+      error:
+        error instanceof Error ? error.message : "An unknown error occurred",
+    };
+  }
+}
