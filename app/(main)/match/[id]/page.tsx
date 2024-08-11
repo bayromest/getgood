@@ -144,33 +144,23 @@ const MatchPage = async ({ params }: MatchPageProps) => {
           <p>
             <strong>Baron:</strong> Kills: {team.objectives.baron.kills}, First:{" "}
             {team.objectives.baron.first ? "Yes" : "No"}, Deaths:{" "}
-            {team.objectives.baron.deaths}, Steals:{" "}
-            {team.objectives.baron.steals}
           </p>
           <p>
             <strong>Dragon:</strong> Kills: {team.objectives.dragon.kills},
             First: {team.objectives.dragon.first ? "Yes" : "No"}, Deaths:{" "}
-            {team.objectives.dragon.deaths}, Steals:{" "}
-            {team.objectives.dragon.steals}
           </p>
           <p>
             <strong>Rift Herald:</strong> Kills:{" "}
             {team.objectives.riftHerald.kills}, First:{" "}
             {team.objectives.riftHerald.first ? "Yes" : "No"}, Deaths:{" "}
-            {team.objectives.riftHerald.deaths}, Steals:{" "}
-            {team.objectives.riftHerald.steals}
           </p>
           <p>
             <strong>Inhibitor:</strong> Kills: {team.objectives.inhibitor.kills}
             , First: {team.objectives.inhibitor.first ? "Yes" : "No"}, Deaths:{" "}
-            {team.objectives.inhibitor.deaths}, Steals:{" "}
-            {team.objectives.inhibitor.steals}
           </p>
           <p>
             <strong>Tower:</strong> Kills: {team.objectives.tower.kills}, First:{" "}
             {team.objectives.tower.first ? "Yes" : "No"}, Deaths:{" "}
-            {team.objectives.tower.deaths}, Steals:{" "}
-            {team.objectives.tower.steals}
           </p>
         </div>
       ))}
