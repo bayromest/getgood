@@ -89,7 +89,7 @@ interface ParticipantDto {
   magicDamageDealt: number;
   magicDamageDealtToChampions: number;
   magicDamageTaken: number;
-  // missions?: MissionsDto; // Missions data
+  missions?: MissionsDto; // Missions data
   neutralMinionsKilled: number; // Incremented on kills of kPet and kJungleMonster
   needVisionPings: number; // Green ward
   nexusKills: number;
@@ -176,9 +176,24 @@ interface ParticipantDto {
   win: boolean;
 }
 
+interface MissionsDto {
+  playerScore0: number;
+  playerScore1: number;
+  playerScore2: number;
+  playerScore3: number;
+  playerScore4: number;
+  playerScore5: number;
+  playerScore6: number;
+  playerScore7: number;
+  playerScore8: number;
+  playerScore9: number;
+  playerScore10: number;
+  playerScore11: number;
+}
+
 // ChallengesDto definition
 interface ChallengesDto {
-  _12AssistStreakCount: number;
+  // _12AssistStreakCount: number;
   baronBuffGoldAdvantageOverThreshold: number;
   controlWardTimeCoverageInRiverOrEnemyHalf: number;
   earliestBaron: number;
@@ -306,7 +321,6 @@ interface ObjectivesDto {
 
 // ObjectiveDto definition
 interface ObjectiveDto {
-  kills: number;
   first: boolean;
-  taken: boolean;
+  kills: number;
 }
