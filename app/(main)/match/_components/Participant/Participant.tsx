@@ -9,6 +9,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import Image from "next/image";
 
 const Participant = ({
   participant,
@@ -20,9 +21,22 @@ const Participant = ({
   return (
     <div className="p-8 border rounded">
       <div className="flex item-center justify-between">
-        <div className="">
-          <span className="font-extrabold">{participant.riotIdGameName}</span>#
-          {participant.riotIdTagline}
+        <div className="flex items-center gap-4">
+          <div className="text-xl font-extrabold space-y-4">
+            {participant.championName}
+          </div>{" "}
+          <p>|</p>{" "}
+          <div className="flex items-center">
+            <Image
+              src={`http://ddragon.leagueoflegends.com/cdn/${version}/img/profileicon/${participant.profileIcon}.png`}
+              alt="Profile Pic"
+              width={30}
+              height={30}
+              className="rounded-full"
+            />
+            <span className="font-extrabold">{participant.riotIdGameName}</span>
+            #{participant.riotIdTagline}
+          </div>
         </div>
         <div className="">
           {participant.kills}/{participant.deaths}/{participant.assists}
@@ -152,6 +166,10 @@ const Participant = ({
           value={participant.challenges.voidMonsterKill}
         />
         <Prop name="abilityUses" value={participant.challenges.abilityUses} />
+        <Prop name="Q casts" value={participant.spell1Casts} />
+        <Prop name="W casts" value={participant.spell2Casts} />
+        <Prop name="E casts" value={participant.spell3Casts} />
+        <Prop name="R casts" value={participant.spell4Casts} />
         <Prop
           name="acesBefore15Minutes"
           value={participant.challenges.acesBefore15Minutes}
@@ -290,21 +308,18 @@ const Participant = ({
         <Prop name="wardKilled" value={participant.challenges.wardKilled} />
       </div>
 
-      <div className="grid grid-cols-5 py-8 gap-2">
-        <div className="champion-details">
-          <Prop name="Champion" value={participant.championName} />
-          <Prop name="championId" value={participant.championId} />
-          <Prop
-            name="championTransform"
-            value={participant.championTransform}
-          />
-          <Prop
-            name="profileIcon"
-            value={participant.profileIcon}
-            profileIcon
-            version={version}
-          />
-        </div>
+      <div className="grid grid-cols-4 py-8 gap-2">
+        <Prop name="Champion" value={participant.championName} />
+        <Prop name="championId" value={participant.championId} />
+        <Prop name="championTransform" value={participant.championTransform} />
+        <Prop
+          name="profileIcon"
+          value={participant.profileIcon}
+          profileIcon
+          version={version}
+        />
+      </div>
+      {/* 
         <div className="game-stats">
           <Prop name="champExperience" value={participant.champExperience} />
           <Prop name="champLevel" value={participant.champLevel} />
@@ -477,10 +492,6 @@ const Participant = ({
           <Prop name="role" value={participant.role} />
         </div>
 
-        {/* <div className="missions-and-perks">
-          <Prop name="missions" value={participant.missions} />
-          <Prop name="perks" value={participant.perks} />
-        </div> */}
 
         <div className="summoner-spells">
           <Prop name="summoner1Id" value={participant.summoner1Id} />
@@ -517,7 +528,7 @@ const Participant = ({
             value={participant.challenges.InfernalScalePickup}
           />
         </div>
-      </div>
+      </div> */}
       <Accordion type="multiple" className="w-full">
         <AccordionItem value="item-1">
           <AccordionTrigger>Pings</AccordionTrigger>
