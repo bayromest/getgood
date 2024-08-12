@@ -1,5 +1,6 @@
 import { GetAccountByPUUID } from "@/actions/accounts";
 import { GetMatchlist } from "@/actions/matches";
+import { getCurrentLeagueVersion } from "@/actions/version";
 import Match from "@/components/Match";
 import React from "react";
 
