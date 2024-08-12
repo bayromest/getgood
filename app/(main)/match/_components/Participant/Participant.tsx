@@ -47,6 +47,11 @@ const Participant = ({
         </div>
       </div>
       <div className="grid grid-cols-5 py-8 gap-2">
+        <Prop name="abilityUses" value={participant.challenges.abilityUses} />
+        <Prop name="Q casts" value={participant.spell1Casts} />
+        <Prop name="W casts" value={participant.spell2Casts} />
+        <Prop name="E casts" value={participant.spell3Casts} />
+        <Prop name="R casts" value={participant.spell4Casts} />
         <Prop
           name="baronBuffGoldAdvantageOverThreshold"
           value={participant.challenges.baronBuffGoldAdvantageOverThreshold}
@@ -125,10 +130,10 @@ const Participant = ({
           name="mostWardsDestroyedOneSweeper"
           value={participant.challenges.mostWardsDestroyedOneSweeper}
         />
-        {/* <Prop
-            name="mythicItemUsed"
-            value={participant.challenges.mythicItemUsed.join(", ")} // Display array as comma-separated values
-          /> */}
+        <Prop
+          name="mythicItemUsed"
+          value={participant.challenges.mythicItemUsed}
+        />
         <Prop
           name="playedChampSelectPosition"
           value={participant.challenges.playedChampSelectPosition}
@@ -158,7 +163,7 @@ const Participant = ({
           value={participant.challenges.visionScoreAdvantageLaneOpponent}
         />
         <Prop
-          name="infernalScalePickup"
+          name="InfernalScalePickup"
           value={participant.challenges.InfernalScalePickup}
         />
         <Prop
@@ -170,10 +175,6 @@ const Participant = ({
           value={participant.challenges.voidMonsterKill}
         />
         <Prop name="abilityUses" value={participant.challenges.abilityUses} />
-        <Prop name="Q casts" value={participant.spell1Casts} />
-        <Prop name="W casts" value={participant.spell2Casts} />
-        <Prop name="E casts" value={participant.spell3Casts} />
-        <Prop name="R casts" value={participant.spell4Casts} />
         <Prop
           name="acesBefore15Minutes"
           value={participant.challenges.acesBefore15Minutes}
@@ -225,10 +226,6 @@ const Participant = ({
           name="dragonTakedowns"
           value={participant.challenges.dragonTakedowns}
         />
-        {/* <Prop
-            name="legendaryItemUsed"
-            value={participant.challenges.legendaryItemUsed.join(", ")} // Display array as comma-separated values
-          /> */}
         <Prop
           name="effectiveHealAndShielding"
           value={participant.challenges.effectiveHealAndShielding}
@@ -246,6 +243,46 @@ const Participant = ({
           value={participant.challenges.enemyChampionImmobilizations}
         />
         <Prop
+          name="enemyJungleMonsterKills"
+          value={participant.challenges.enemyJungleMonsterKills}
+        />
+        <Prop
+          name="epicMonsterKillsNearEnemyJungler"
+          value={participant.challenges.epicMonsterKillsNearEnemyJungler}
+        />
+        <Prop
+          name="epicMonsterKillsWithin30SecondsOfSpawn"
+          value={participant.challenges.epicMonsterKillsWithin30SecondsOfSpawn}
+        />
+        <Prop
+          name="epicMonsterSteals"
+          value={participant.challenges.epicMonsterSteals}
+        />
+        <Prop
+          name="epicMonsterStolenWithoutSmite"
+          value={participant.challenges.epicMonsterStolenWithoutSmite}
+        />
+        <Prop
+          name="firstTurretKilled"
+          value={participant.challenges.firstTurretKilled}
+        />
+        <Prop
+          name="firstTurretKilledTime"
+          value={participant.challenges.firstTurretKilledTime}
+        />
+        <Prop name="flawlessAces" value={participant.challenges.flawlessAces} />
+        <Prop
+          name="fullTeamTakedown"
+          value={participant.challenges.fullTeamTakedown}
+        />
+        <Prop name="gameLength" value={participant.challenges.gameLength} />
+        <Prop
+          name="getTakedownsInAllLanesEarlyJungleAsLaner"
+          value={
+            participant.challenges.getTakedownsInAllLanesEarlyJungleAsLaner
+          }
+        />
+        <Prop
           name="firstDragonTakedown"
           value={participant.challenges.firstDragonTakedown}
         />
@@ -256,6 +293,40 @@ const Participant = ({
         <Prop
           name="goldPerMinute"
           value={participant.challenges.goldPerMinute}
+        />
+        <Prop name="hadOpenNexus" value={participant.challenges.hadOpenNexus} />
+        <Prop
+          name="immobilizeAndKillWithAlly"
+          value={participant.challenges.immobilizeAndKillWithAlly}
+        />
+        <Prop
+          name="initialBuffCount"
+          value={participant.challenges.initialBuffCount}
+        />
+        <Prop
+          name="initialCrabCount"
+          value={participant.challenges.initialCrabCount}
+        />
+        <Prop
+          name="jungleCsBefore10Minutes"
+          value={participant.challenges.jungleCsBefore10Minutes}
+        />
+        <Prop
+          name="junglerTakedownsNearDamagedEpicMonster"
+          value={participant.challenges.junglerTakedownsNearDamagedEpicMonster}
+        />
+        <Prop name="kda" value={participant.challenges.kda} />
+        <Prop
+          name="killAfterHiddenWithAlly"
+          value={participant.challenges.killAfterHiddenWithAlly}
+        />
+        <Prop
+          name="killedChampTookFullTeamDamageSurvived"
+          value={participant.challenges.killedChampTookFullTeamDamageSurvived}
+        />
+        <Prop
+          name="killingSprees"
+          value={participant.challenges.killingSprees}
         />
         <Prop
           name="goldToChampsPerMinute"
@@ -274,6 +345,58 @@ const Participant = ({
           value={participant.challenges.killParticipation}
         />
         <Prop
+          name="killsNearEnemyTurret"
+          value={participant.challenges.killsNearEnemyTurret}
+        />
+        <Prop
+          name="killsOnOtherLanesEarlyJungleAsLaner"
+          value={participant.challenges.killsOnOtherLanesEarlyJungleAsLaner}
+        />
+        <Prop
+          name="killsOnRecentlyHealedByAramPack"
+          value={participant.challenges.killsOnRecentlyHealedByAramPack}
+        />
+        <Prop
+          name="killsUnderOwnTurret"
+          value={participant.challenges.killsUnderOwnTurret}
+        />
+        <Prop
+          name="killsWithHelpFromEpicMonster"
+          value={participant.challenges.killsWithHelpFromEpicMonster}
+        />
+        <Prop
+          name="knockEnemyIntoTeamAndKill"
+          value={participant.challenges.knockEnemyIntoTeamAndKill}
+        />
+        <Prop
+          name="kTurretsDestroyedBeforePlatesFall"
+          value={participant.challenges.kTurretsDestroyedBeforePlatesFall}
+        />
+        <Prop
+          name="landSkillShotsEarlyGame"
+          value={participant.challenges.landSkillShotsEarlyGame}
+        />
+        <Prop
+          name="laneMinionsFirst10Minutes"
+          value={participant.challenges.laneMinionsFirst10Minutes}
+        />
+        <Prop
+          name="lostAnInhibitor"
+          value={participant.challenges.lostAnInhibitor}
+        />
+        <Prop
+          name="maxKillDeficit"
+          value={participant.challenges.maxKillDeficit}
+        />
+        <Prop
+          name="mejaisFullStackInTime"
+          value={participant.challenges.mejaisFullStackInTime}
+        />
+        <Prop
+          name="moreEnemyJungleThanOpponent"
+          value={participant.challenges.moreEnemyJungleThanOpponent}
+        />
+        <Prop
           name="killsPerMinute"
           value={participant.challenges.killsPerMinute}
         />
@@ -289,6 +412,160 @@ const Participant = ({
         <Prop
           name="multiKillOneSpell"
           value={participant.challenges.multiKillOneSpell}
+        />
+        <Prop name="multikills" value={participant.challenges.multikills} />
+        <Prop
+          name="multikillsAfterAggressiveFlash"
+          value={participant.challenges.multikillsAfterAggressiveFlash}
+        />
+        <Prop
+          name="multiTurretRiftHeraldCount"
+          value={participant.challenges.multiTurretRiftHeraldCount}
+        />
+        <Prop
+          name="outerTurretExecutesBefore10Minutes"
+          value={participant.challenges.outerTurretExecutesBefore10Minutes}
+        />
+        <Prop
+          name="outnumberedKills"
+          value={participant.challenges.outnumberedKills}
+        />
+        <Prop
+          name="outnumberedNexusKill"
+          value={participant.challenges.outnumberedNexusKill}
+        />
+        <Prop
+          name="perfectDragonSoulsTaken"
+          value={participant.challenges.perfectDragonSoulsTaken}
+        />
+        <Prop name="perfectGame" value={participant.challenges.perfectGame} />
+        <Prop
+          name="pickKillWithAlly"
+          value={participant.challenges.pickKillWithAlly}
+        />
+        <Prop
+          name="poroExplosions"
+          value={participant.challenges.poroExplosions}
+        />
+        <Prop name="quickCleanse" value={participant.challenges.quickCleanse} />
+        <Prop
+          name="quickFirstTurret"
+          value={participant.challenges.quickFirstTurret}
+        />
+        <Prop
+          name="quickSoloKills"
+          value={participant.challenges.quickSoloKills}
+        />
+        <Prop
+          name="riftHeraldTakedowns"
+          value={participant.challenges.riftHeraldTakedowns}
+        />
+        <Prop
+          name="saveAllyFromDeath"
+          value={participant.challenges.saveAllyFromDeath}
+        />
+        <Prop
+          name="scuttleCrabKills"
+          value={participant.challenges.scuttleCrabKills}
+        />
+        <Prop
+          name="shortestTimeToAceFromFirstTakedown"
+          value={participant.challenges.shortestTimeToAceFromFirstTakedown}
+        />
+        <Prop
+          name="skillshotsDodged"
+          value={participant.challenges.skillshotsDodged}
+        />
+        <Prop
+          name="skillshotsHit"
+          value={participant.challenges.skillshotsHit}
+        />
+        <Prop name="snowballsHit" value={participant.challenges.snowballsHit} />
+        <Prop
+          name="soloBaronKills"
+          value={participant.challenges.soloBaronKills}
+        />
+        <Prop name="soloKills" value={participant.challenges.soloKills} />
+        <Prop
+          name="stealthWardsPlaced"
+          value={participant.challenges.stealthWardsPlaced}
+        />
+        <Prop
+          name="survivedSingleDigitHpCount"
+          value={participant.challenges.survivedSingleDigitHpCount}
+        />
+        <Prop
+          name="survivedThreeImmobilizesInFight"
+          value={participant.challenges.survivedThreeImmobilizesInFight}
+        />
+        <Prop
+          name="takedownOnFirstTurret"
+          value={participant.challenges.takedownOnFirstTurret}
+        />
+        <Prop name="takedowns" value={participant.challenges.takedowns} />
+        <Prop
+          name="takedownsAfterGainingLevelAdvantage"
+          value={participant.challenges.takedownsAfterGainingLevelAdvantage}
+        />
+        <Prop
+          name="takedownsBeforeJungleMinionSpawn"
+          value={participant.challenges.takedownsBeforeJungleMinionSpawn}
+        />
+        <Prop
+          name="takedownsFirstXMinutes"
+          value={participant.challenges.takedownsFirstXMinutes}
+        />
+        <Prop
+          name="takedownsInAlcove"
+          value={participant.challenges.takedownsInAlcove}
+        />
+        <Prop
+          name="takedownsInEnemyFountain"
+          value={participant.challenges.takedownsInEnemyFountain}
+        />
+        <Prop
+          name="teamBaronKills"
+          value={participant.challenges.teamBaronKills}
+        />
+        <Prop
+          name="teamDamagePercentage"
+          value={participant.challenges.teamDamagePercentage}
+        />
+        <Prop
+          name="teamElderDragonKills"
+          value={participant.challenges.teamElderDragonKills}
+        />
+        <Prop
+          name="tookLargeDamageSurvived"
+          value={participant.challenges.tookLargeDamageSurvived}
+        />
+        <Prop
+          name="turretPlatesTaken"
+          value={participant.challenges.turretPlatesTaken}
+        />
+        <Prop
+          name="turretsTakenWithRiftHerald"
+          value={participant.challenges.turretsTakenWithRiftHerald}
+        />
+        <Prop
+          name="turretTakedowns"
+          value={participant.challenges.turretTakedowns}
+        />
+        <Prop
+          name="twentyMinionsIn3SecondsCount"
+          value={participant.challenges.twentyMinionsIn3SecondsCount}
+        />
+        <Prop
+          name="twoWardsOneSweeperCount"
+          value={participant.challenges.twoWardsOneSweeperCount}
+        />
+        <Prop
+          name="unseenRecalls"
+          value={participant.challenges.unseenRecalls}
+        />
+        <Prop
+          name="visionScorePerMinute"
+          value={participant.challenges.visionScorePerMinute}
         />
         <Prop
           name="objectiveDeaths"
@@ -310,6 +587,15 @@ const Participant = ({
           value={participant.challenges.wardsVisionScore}
         />
         <Prop name="wardKilled" value={participant.challenges.wardKilled} />
+        <Prop name="wardsGuarded" value={participant.challenges.wardsGuarded} />
+        <Prop
+          name="wardTakedowns"
+          value={participant.challenges.wardTakedowns}
+        />
+        <Prop
+          name="wardTakedownsBefore20M"
+          value={participant.challenges.wardTakedownsBefore20M}
+        />
       </div>
 
       <div className="grid grid-cols-4 py-8 gap-2">
