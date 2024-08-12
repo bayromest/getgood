@@ -10,6 +10,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import Image from "next/image";
+import Link from "next/link";
 
 const Participant = ({
   participant,
@@ -26,7 +27,10 @@ const Participant = ({
             {participant.championName}
           </div>{" "}
           <p>|</p>{" "}
-          <div className="flex items-center rounded-full border p-2">
+          <Link
+            href={`/summoner/${participant.puuid}`}
+            className="flex items-center rounded-full border p-2"
+          >
             <Image
               src={`http://ddragon.leagueoflegends.com/cdn/${version}/img/profileicon/${participant.profileIcon}.png`}
               alt="Profile Pic"
@@ -36,7 +40,7 @@ const Participant = ({
             />
             <span className="font-extrabold">{participant.riotIdGameName}</span>
             #{participant.riotIdTagline}
-          </div>
+          </Link>
         </div>
         <div className="">
           {participant.kills}/{participant.deaths}/{participant.assists}
