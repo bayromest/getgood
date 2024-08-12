@@ -9,11 +9,12 @@ const page = async ({ params }: { params: { puuid: string } }) => {
   const account = await GetAccountByPUUID({ puuid: params.puuid });
 
   return (
-    <div className="">
+    <div className="flex flex-col items-center justify-center p-4 w-full">
       <div>
-        {account.gameName}#{account.tagLine}
+        <span className="font-extrabold">{account.gameName}</span>#
+        {account.tagLine}
       </div>
-      <div className="">
+      <div className="w-full grid grid-cols-1  lg:grid-cols-2 gap-2">
         {matches.map((match: string) => (
           <Match key={match} id={match} />
         ))}

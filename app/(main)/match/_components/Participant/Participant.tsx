@@ -26,13 +26,13 @@ const Participant = ({
             {participant.championName}
           </div>{" "}
           <p>|</p>{" "}
-          <div className="flex items-center">
+          <div className="flex items-center rounded-full border p-2">
             <Image
               src={`http://ddragon.leagueoflegends.com/cdn/${version}/img/profileicon/${participant.profileIcon}.png`}
               alt="Profile Pic"
               width={30}
               height={30}
-              className="rounded-full"
+              className="rounded-full mr-2"
             />
             <span className="font-extrabold">{participant.riotIdGameName}</span>
             #{participant.riotIdTagline}
