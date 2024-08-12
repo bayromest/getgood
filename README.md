@@ -4,6 +4,8 @@
 
 A website that displays useless infos using the [Riot API](https://developer.riotgames.com/apis)
 
+NextJS/Axios/Shadcn/TS
+
 ## Getting Started
 
 Clone the repo and install the dependencies:
